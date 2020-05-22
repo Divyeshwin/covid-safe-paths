@@ -226,7 +226,8 @@ android {
 
 dependencies {
     // loading html files
-    compile project(':react-native-local-resource')
+    implementation "androidx.appcompat:appcompat:1.2.0-alpha02"
+    implementation project(':react-native-local-resource')
     implementation project(':react-native-reanimated')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
@@ -235,6 +236,7 @@ dependencies {
     implementation 'com.bottlerocketstudios:vault:1.4.2'
     implementation 'com.google.android.gms:play-services-gcm:15.0.1'
     implementation 'com.google.android.gms:play-services-location:15.0.1'
+
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/"
